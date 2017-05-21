@@ -19,7 +19,7 @@ import Products.CMFCore.permissions as CMFCorePermissions
 from Products import ATContentTypes
 
 from Products.PloneHelpCenter.config import *
-from PHCContent import HideMetadataFields
+from .PHCContent import HideMetadataFields
 from Products.PloneHelpCenter.interfaces import \
     IHelpCenterMultiPage, IHelpCenterNavRoot
 

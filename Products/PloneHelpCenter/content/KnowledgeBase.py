@@ -13,8 +13,8 @@ from Products.ATContentTypes.content import folder, schemata
 
 from Products.PloneHelpCenter.config import PROJECTNAME
 from Products.PloneHelpCenter.interfaces import IHelpCenterFolder
-from schemata import HelpCenterContainerSchema
-from PHCFolder import PHCFolder
+from .schemata import HelpCenterContainerSchema
+from .PHCFolder import PHCFolder
 
 KnowledgeBaseSchema = folder.ATBTreeFolderSchema.copy() + HelpCenterContainerSchema
 schemata.finalizeATCTSchema(KnowledgeBaseSchema, moveDiscussion=False, folderish=True)

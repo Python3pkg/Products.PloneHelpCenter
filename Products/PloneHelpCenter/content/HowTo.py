@@ -9,8 +9,8 @@ except ImportError:
 
 from Products.PloneHelpCenter.config import *
 from Products.PloneHelpCenter.interfaces import IHelpCenterHowTo
-from schemata import HelpCenterItemSchemaNarrow
-from PHCContent import PHCContentMixin, HideOwnershipFields, IHelpCenterContent
+from .schemata import HelpCenterItemSchemaNarrow
+from .PHCContent import PHCContentMixin, HideOwnershipFields, IHelpCenterContent
 
 from Products.ATContentTypes.interface import IATFolder, IATDocument
 from Products.ATContentTypes.content.document import \

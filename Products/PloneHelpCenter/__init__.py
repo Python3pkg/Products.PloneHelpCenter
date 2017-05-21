@@ -10,7 +10,7 @@ from Products.PloneHelpCenter import content
 # Ensure that pickles refering to the old 'types' module now find 'content'
 sys.modules['Products.PloneHelpCenter.types'] = content
 
-from config import *
+from .config import *
 
 registerDirectory(SKINS_DIR, GLOBALS)
 
@@ -69,19 +69,19 @@ def initialize(context):
             rootConstructors[contentTypes[i].meta_type] = constructors[i]
 
     # Set custom add permission for items and the help center root
-    for meta_type, constructor in itemConstructors.items():
+    for meta_type, constructor in list(itemConstructors.items()):
         context.registerClass(
             meta_type = meta_type,
             constructors = (constructor,),
             permission = ADD_DOCUMENTATION_PERMISSION,
             )
-    for meta_type, constructor in areaConstructors.items():
+    for meta_type, constructor in list(areaConstructors.items()):
         context.registerClass(
             meta_type = meta_type,
             constructors = (constructor,),
             permission = ADD_HELP_AREA_PERMISSION,
             )
-    for meta_type, constructor in rootConstructors.items():
+    for meta_type, constructor in list(rootConstructors.items()):
         context.registerClass(
             meta_type = meta_type,
             constructors = (constructor,),

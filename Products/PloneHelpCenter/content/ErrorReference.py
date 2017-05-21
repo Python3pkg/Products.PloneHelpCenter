@@ -6,7 +6,7 @@ except ImportError:
     # No multilingual support
     from Products.Archetypes.public import *
 from Products.PloneHelpCenter.config import *
-from HowTo import HowToSchema, HelpCenterHowTo
+from .HowTo import HowToSchema, HelpCenterHowTo
 
 ErrorReferenceSchema = HowToSchema.copy()
 # del ErrorReferenceSchema['versions']

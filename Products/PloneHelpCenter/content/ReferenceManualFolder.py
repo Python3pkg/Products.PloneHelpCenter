@@ -15,8 +15,8 @@ except ImportError:
 
 from AccessControl import ClassSecurityInfo
 from Products.PloneHelpCenter.config import *
-from schemata import HelpCenterBaseSchemaFolderish, HelpCenterContainerSchema
-from PHCFolder import PHCFolder
+from .schemata import HelpCenterBaseSchemaFolderish, HelpCenterContainerSchema
+from .PHCFolder import PHCFolder
 
 from Products import ATContentTypes as atct
 from Products.PloneHelpCenter.interfaces import IHelpCenterFolder

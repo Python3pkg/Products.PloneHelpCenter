@@ -7,9 +7,9 @@ try:
         from i18ndude import catalog
         HAVE_i18n = True
     except ImportError:
-        print "i18ndude not found... skipping i18n tests."
+        print("i18ndude not found... skipping i18n tests.")
 except ImportError:
-    print "i18ntestcase not found... skipping i18n tests."
+    print("i18ntestcase not found... skipping i18n tests.")
 
 from Testing import ZopeTestCase
 from App.Common import package_home

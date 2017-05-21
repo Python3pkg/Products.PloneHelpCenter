@@ -8,8 +8,8 @@ from Products.ATContentTypes.content.document import ATDocumentBase
 from Products.ATContentTypes.content.schemata import finalizeATCTSchema
 
 from Products.PloneHelpCenter.config import *
-from schemata import HelpCenterItemSchemaNarrow
-from PHCContent import PHCContentMixin
+from .schemata import HelpCenterItemSchemaNarrow
+from .PHCContent import PHCContentMixin
 
 FAQSchema = ATContentTypes.content.document.ATDocumentSchema.copy() + HelpCenterItemSchemaNarrow
 FAQSchema['description'].widget = \

@@ -17,8 +17,8 @@ from plone.app.layout.navigation.navtree import NavtreeStrategyBase, buildFolder
 from Products import ATContentTypes
 from Products.ATContentTypes.content.schemata import finalizeATCTSchema
 
-from schemata import HelpCenterItemSchemaNarrow
-from PHCContent import PHCContentMixin
+from .schemata import HelpCenterItemSchemaNarrow
+from .PHCContent import PHCContentMixin
 from Products.PloneHelpCenter.config import *
 from Products.PloneHelpCenter.interfaces import IHelpCenterNavRoot
 

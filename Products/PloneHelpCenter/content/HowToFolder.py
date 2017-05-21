@@ -14,10 +14,10 @@ except ImportError:
     from Products.Archetypes.public import *
 from AccessControl import ClassSecurityInfo
 from Products.PloneHelpCenter.config import *
-from schemata import HelpCenterBaseSchemaFolderish, HelpCenterContainerSchema
+from .schemata import HelpCenterBaseSchemaFolderish, HelpCenterContainerSchema
 
 from Products import ATContentTypes
-from PHCFolder import PHCFolder
+from .PHCFolder import PHCFolder
 from Products.PloneHelpCenter.interfaces import IHelpCenterFolder
 
 HowToFolderSchema = HelpCenterBaseSchemaFolderish + Schema((

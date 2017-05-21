@@ -1,6 +1,6 @@
 from Products.Archetypes.utils import OrderedDict
 
-import Data
+from . import Data
 
 
 def CreateRootPHC(self, portal):

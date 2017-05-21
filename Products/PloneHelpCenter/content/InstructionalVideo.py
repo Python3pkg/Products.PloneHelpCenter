@@ -5,8 +5,8 @@ except ImportError:
     from Products.Archetypes.public import *
 from AccessControl import ClassSecurityInfo
 from Products.PloneHelpCenter.config import *
-from schemata import HelpCenterBaseSchema, GenericHelpCenterItemSchema
-from PHCContent import PHCContent
+from .schemata import HelpCenterBaseSchema, GenericHelpCenterItemSchema
+from .PHCContent import PHCContent
 
 InstructionalVideoSchema = HelpCenterBaseSchema + Schema((
     TextField(

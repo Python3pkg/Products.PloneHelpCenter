@@ -6,7 +6,7 @@ upgrades.py
 Created by Steve McMahon on 2009-04-17.
 """
 
-from StringIO import StringIO
+from io import StringIO
 import logging
 
 from Products.Archetypes.public import listTypes
@@ -16,7 +16,7 @@ from Products.contentmigration import walker
 from Products.contentmigration.archetypes import InplaceATItemMigrator
 from zope.component import getUtility
 
-from config import PROJECTNAME
+from .config import PROJECTNAME
 
 PROFILE_ID = 'profile-Products.PloneHelpCenter:default'
 logger = logging.getLogger('PloneHelpCenter')
@@ -182,10 +182,10 @@ def runTypesMigration(setuptool):
     portal = getPortal()
 
     # add next/previous flags to multi-page types
-    print migrateNextPrev(portal)
+    print(migrateNextPrev(portal))
     # move body texts
-    print migrateBodyTexts(portal)
-    print migrateFAQs(portal)
+    print(migrateBodyTexts(portal))
+    print(migrateFAQs(portal))
 
     # real type migration: convert manual and
     # tutorial pages to the new, generic leaf
@@ -194,8 +194,8 @@ def runTypesMigration(setuptool):
     for migrator in (RMPageMigrator, TPageMigrator):
         walker = migrator.walkerClass(portal, migrator)
         walker.go(out=out)
-        print out
-        print walker.getOutput()
+        print(out)
+        print(walker.getOutput())
 
     # object_provides catalog entries need updating
     reindexNearlyAll(setuptool)

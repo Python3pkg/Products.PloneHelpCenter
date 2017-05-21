@@ -62,7 +62,7 @@ class HelpCenterFolderView(BrowserView):
                     items.append(item)
             return items
         else:
-            if isinstance(section, basestring):
+            if isinstance(section, str):
                 # Wrap in list to avoid solr interpreting sections with spaces
                 # as multiple keywords
                 criteria['getSections'] = [section]
@@ -239,4 +239,4 @@ class HelpCenterFolderView(BrowserView):
                 sections[s]=1
             if len(sections) == max_sections:
                 break
-        return [s for s in allSections if sections.has_key(s)]
+        return [s for s in allSections if s in sections]

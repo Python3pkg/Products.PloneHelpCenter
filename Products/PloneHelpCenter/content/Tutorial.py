@@ -12,8 +12,8 @@ from Products import ATContentTypes
 from Products.ATContentTypes.content.schemata import finalizeATCTSchema
 
 from Products.PloneHelpCenter.config import *
-from schemata import HelpCenterItemSchemaNarrow
-from PHCContent import PHCContentMixin
+from .schemata import HelpCenterItemSchemaNarrow
+from .PHCContent import PHCContentMixin
 from Products.PloneHelpCenter.interfaces import IHelpCenterNavRoot
 
 TutorialSchema = ATContentTypes.content.folder.ATFolderSchema.copy() + HelpCenterItemSchemaNarrow

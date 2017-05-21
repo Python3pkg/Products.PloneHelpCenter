@@ -6,13 +6,13 @@ traversal.py
 Created by Steve McMahon on 2009-04-19.
 """
 
-import urllib
+import urllib.request, urllib.parse, urllib.error
 
 from zope.component import adapts, getMultiAdapter
 from zope.publisher.interfaces.http import IHTTPRequest
 from ZPublisher.BaseRequest import DefaultPublishTraverse
 
-from interfaces import IHelpCenterFolder, IHelpCenter
+from .interfaces import IHelpCenterFolder, IHelpCenter
 
 
 class PHCBaseTraverser(DefaultPublishTraverse):
@@ -24,7 +24,7 @@ class PHCBaseTraverser(DefaultPublishTraverse):
             furtherPath = request['TraversalRequestNameStack']
             if furtherPath:
                 # put argument in request
-                request['topic'] = urllib.unquote_plus(furtherPath[0])
+                request['topic'] = urllib.parse.unquote_plus(furtherPath[0])
                 # clean stack
                 while furtherPath:
                     furtherPath.pop()

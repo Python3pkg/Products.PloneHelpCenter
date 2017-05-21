@@ -9,7 +9,7 @@ try:
     LinguaPlone  # pyflakes
 except ImportError:
     LinguaPlone = False
-    print "LinguaPlone not found... skipping multilingual tests."
+    print("LinguaPlone not found... skipping multilingual tests.")
 
 
 class TestMultilingual(PHCTestCase.PHCTestCase):

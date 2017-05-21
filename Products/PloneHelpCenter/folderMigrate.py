@@ -47,17 +47,17 @@ if user:
     user = user.__of__(acl_users)
     newSecurityManager(None, user)
 else:
-    print "Retrieving admin user failed"
+    print("Retrieving admin user failed")
     sys.exit(1)
 
 phc = app.unrestrictedTraverse(myPHC)
-print phc
+print(phc)
 
 phcView = HelpCenterView(phc, app.REQUEST)
-print phcView
+print(phcView)
 
 target = phc.unrestrictedTraverse(targetId)
-print target
+print(target)
 
 majorTopics = phcView.getMajorTopics()
 
@@ -66,7 +66,7 @@ ids = target.objectIds()
 for title in majorTopics:
     id = folderIdMap.get(title, normalize(title))
     if id not in ids:
-        print id, title
+        print(id, title)
         _createObjectByType(folderType, target, id)
         obj = target[id]
         obj.setTitle(title)
@@ -75,7 +75,7 @@ transaction.commit()
 
 # walk the sources
 for source in [phc[s] for s in sources]:
-    print source
+    print(source)
 
     for id, object in source.objectItems():
         # find the first section
@@ -97,14 +97,14 @@ for source in [phc[s] for s in sources]:
                     folder[id].reindexObject()
                     transaction.commit()
                 else:
-                    print "Duplicate id: %s" % id
+                    print("Duplicate id: %s" % id)
                     # source.manage_deleteObjects(id)
             else:
                 # target folder not present -- should be an odd case
-                print "No fid: %s %s" % (id, pSection,)
+                print("No fid: %s %s" % (id, pSection,))
         else:
             # Leave it where it is
-            print "No sections: ",
-            print id, object.getSections()
+            print("No sections: ", end=' ')
+            print(id, object.getSections())
 
 noSecurityManager()

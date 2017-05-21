@@ -3,22 +3,22 @@
 # the Install.py method also should be changed,
 # and the __init__ method for HelpCenter.py.
 
-import HelpCenter
+from . import HelpCenter
 
-import FAQFolder, FAQ
+from . import FAQFolder, FAQ
 
-import HowToFolder, HowTo
+from . import HowToFolder, HowTo
 
-import TutorialFolder, Tutorial, TutorialPage
+from . import TutorialFolder, Tutorial, TutorialPage
 
-import ReferenceManualFolder, ReferenceManual, ReferenceManualSection, ReferenceManualPage
+from . import ReferenceManualFolder, ReferenceManual, ReferenceManualSection, ReferenceManualPage
 
-import InstructionalVideoFolder, InstructionalVideo
+from . import InstructionalVideoFolder, InstructionalVideo
 
-import LinkFolder, Link
+from . import LinkFolder, Link
 
-import ErrorReferenceFolder, ErrorReference
+from . import ErrorReferenceFolder, ErrorReference
 
-import Glossary, Definition
+from . import Glossary, Definition
 
-import KnowledgeBase, LeafPage
+from . import KnowledgeBase, LeafPage

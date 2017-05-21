@@ -4,8 +4,8 @@ except ImportError:
     # No multilingual support
     from Products.Archetypes.public import *
 from Products.PloneHelpCenter.config import *
-from schemata import HelpCenterBaseSchema, GenericHelpCenterItemSchema
-from PHCContent import PHCContent
+from .schemata import HelpCenterBaseSchema, GenericHelpCenterItemSchema
+from .PHCContent import PHCContent
 
 DefinitionSchema = HelpCenterBaseSchema + Schema((
     TextField(

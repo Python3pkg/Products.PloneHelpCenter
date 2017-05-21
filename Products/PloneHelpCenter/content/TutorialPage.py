@@ -13,7 +13,7 @@ from Products import ATContentTypes
 from Products.ATContentTypes.interface import IATDocument
 
 from Products.PloneHelpCenter.config import *
-from PHCContent import HideOwnershipFields
+from .PHCContent import HideOwnershipFields
 from Products.PloneHelpCenter.interfaces import IHelpCenterMultiPage
 
 TutorialPageSchema = ATContentTypes.content.document.ATDocumentSchema.copy()
